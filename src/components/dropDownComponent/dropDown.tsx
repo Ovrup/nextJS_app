@@ -26,10 +26,11 @@ const DropDown: React.FC<DropdownPropstype> = ({ onSelect, breeds, selectedBreed
     const [showList, setShowList] = useState<boolean>(false);
     const { theme } = useTheme();
     const [query, setQuery] = useState("")
-    const filteredBreeds = breeds.filter((breed: BreedType) => breed.name.includes(query))
+    const filteredBreeds = breeds.filter((breed: BreedType) => breed.name.toLocaleLowerCase().includes(query.toLocaleLowerCase()))
 
     function handleDropDownItem(breed: BreedType) {
         try {
+            setQuery("")
             setShowList((prev) => !prev);
             setSelectedBreed(breed);
             onSelect(breed);
