@@ -1,0 +1,78 @@
+.image-gallery-container {
+    width: 100%;
+    margin-top: 1.1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    gap: 1.25rem;
+    padding: 0.625rem;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modal-img-section {
+        width: 60%;
+        height: 100%;
+        object-position: center;
+        object-fit: contain;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .modal-desc-section {
+        width: 40%;
+        height: 100%;
+        background-color: #fff;
+        padding: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+        background-color: var(--header-background);
+
+        .breed-name {
+            font-size: 2rem;
+        }
+
+        .weight-height {
+            width: 100%;
+            height: 5rem;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: 8rem;
+            align-items: flex-start;
+            justify-content: center;
+        }
+    }
+
+}
+
+.flex-column {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .image-gallery-container {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-gallery-container {
+        grid-template-columns: repeat(1, 100%);
+    }
+}

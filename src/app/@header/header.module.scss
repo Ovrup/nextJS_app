@@ -1,0 +1,64 @@
+ @mixin flex {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .header-container {
+     @include flex;
+     justify-content: space-between;
+     width: 100%;
+     height: 90px;
+     background-color: var(--header-background);
+     padding: 10px 30px;
+
+     .nav-logo {
+         object-fit: contain;
+         object-position: center;
+         filter: var(--svg-logo-filter)
+     }
+
+     .user-icon {
+         position: relative;
+         font-size: 2.5rem;
+         color: var(--user-icon-color);
+
+         svg {
+             cursor: pointer;
+         }
+
+         .theme-container {
+             @include flex;
+             flex-direction: column;
+             align-items: flex-start;
+             position: absolute;
+             top: 100%;
+             right: 0;
+             padding: 0.8rem;
+             gap: 0.8rem;
+             width: 10rem;
+             height: 7rem;
+             background-color: var(--theme-container-background);
+             border-radius: 5px;
+             box-shadow: 0.5px 0.5px 1px 1px var(--shadow-color);
+
+             .theme-label {
+                 @include flex;
+                 justify-content: flex-start;
+                 width: 100%;
+                 gap: 0.7rem;
+                 cursor: pointer;
+
+                 input {
+                     cursor: pointer;
+                 }
+
+
+                 .theme-text {
+                     font-size: 0.8rem;
+                     font-weight: 500;
+                 }
+             }
+         }
+     }
+ }

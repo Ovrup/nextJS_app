@@ -1,0 +1,118 @@
+ @mixin flex {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .footer-container {
+     @include flex;
+     justify-content: space-between;
+     padding: 3.125rem;
+     background-color: var(--header-background);
+     height: 5.625rem;
+
+     .footer-text {
+         font-size: 1.125rem;
+         color: var(--text-color);
+     }
+
+     .footer-icon-container {
+         @include flex;
+         gap: 1.25rem;
+
+         .footer-brand-icon {
+             font-size: 1.2rem;
+             color: var(--brand-icon-color);
+         }
+     }
+ }
+
+ @media screen and (max-width: 1200px) {
+     .footer-container {
+         padding: 2.75rem;
+
+         .footer-text {
+             font-size: 1.1rem;
+         }
+
+         .footer-icon-container {
+             gap: 1.25rem;
+
+             .footer-brand-icon {
+                 font-size: 1.1rem;
+             }
+         }
+     }
+ }
+
+ @media screen and (max-width: 992px) {
+     .footer-container {
+         padding: 2.25rem;
+
+         .footer-text {
+             font-size: 1rem;
+         }
+
+         .footer-icon-container {
+             gap: 1.25rem;
+
+             .footer-brand-icon {
+                 font-size: 1rem;
+             }
+         }
+     }
+ }
+
+ @media screen and (max-width: 768px) {
+     .footer-container {
+         padding: 1.9rem;
+
+         .footer-text {
+             font-size: 0.95rem;
+         }
+
+         .footer-icon-container {
+             gap: 1.1rem;
+
+             .footer-brand-icon {
+                 font-size: 0.9rem;
+             }
+         }
+     }
+ }
+
+ @media screen and (max-width: 576px) {
+     .footer-container {
+         padding: 1.5rem;
+
+         .footer-text {
+             font-size: 0.85rem;
+         }
+
+         .footer-icon-container {
+             gap: 0.95rem;
+
+             .footer-brand-icon {
+                 font-size: 0.8rem;
+             }
+         }
+     }
+ }
+
+ @media screen and (max-width: 384px) {
+     .footer-container {
+         padding: 1.3rem;
+
+         .footer-text {
+             font-size: 0.775rem;
+         }
+
+         .footer-icon-container {
+             gap: 0.95rem;
+
+             .footer-brand-icon {
+                 font-size: 0.7rem;
+             }
+         }
+     }
+ }

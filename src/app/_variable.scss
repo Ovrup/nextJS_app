@@ -1,0 +1,24 @@
+[data-theme='light'] {
+    --header-background: rgb(255, 255, 255);
+    --content-background: rgb(239, 239, 239);
+    --theme-container-background: rgb(255, 255, 255);
+    --shadow-color: rgb(220, 220, 220);
+    --text-color: rgb(5, 5, 5);
+    --dropdown-background: rgb(252, 251, 252);
+    --hover-color: rgb(241, 244, 247)
+}
+
+
+[data-theme='dark'] {
+    --header-background: rgb(20, 29, 40);
+    --content-background: rgb(10, 10, 10);
+    --user-icon-color: rgb(85, 167, 248);
+    --theme-container-background: rgb(51, 64, 83);
+    --shadow-color: rgb(78, 162, 249);
+    --text-color: rgb(255, 255, 255);
+    --brand-icon-color: rgb(85, 167, 248);
+    --svg-logo-filter: invert(57%) sepia(88%) saturate(6602%) hue-rotate(266deg) brightness(99%) contrast(103%);
+    --dropdown-background: rgb(51, 64, 83);
+    --hover-color: rgb(41, 50, 63);
+    --ndf-filter-color: invert(63%) sepia(9%) saturate(6014%) hue-rotate(185deg) brightness(98%) contrast(98%);
+}
